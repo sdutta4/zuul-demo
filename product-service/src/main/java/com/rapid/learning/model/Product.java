@@ -1,6 +1,11 @@
 package com.rapid.learning.model;
 
-public class Product {
+import org.springframework.data.redis.core.RedisHash;
+
+import java.io.Serializable;
+
+@RedisHash("Product")
+public class Product implements Serializable {
 
     private String productName;
     private String productDescription;
